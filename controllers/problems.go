@@ -27,3 +27,7 @@ func (p Problems) Create(resp http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(resp, r, "/?highlight="+strconv.Itoa(prob.ID), http.StatusFound)
 }
+
+func (p Problems) View(resp http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(resp, "Hello, World!")
+}
