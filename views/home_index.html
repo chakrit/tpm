@@ -1,0 +1,43 @@
+<html>
+    
+<head>
+    <title>TPM website!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="section">
+            <h1 class="title">TPM Website</h1>
+            <table class="table is-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Summary</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ $h := .Highlight}}
+                    {{ range .Problems }}
+                    {{ if (eq $h .ID) }}
+                    <tr class="is-selected">
+                    {{ else }}
+                    <tr>
+                    {{ end }}
+                        <td>{{ .ID }}</td>
+                        <td>{{ .Summary }}</td>
+                        <td>{{ .Description }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+            <hr/>
+            <p>
+                <a href="/problems/new" class="button is-success">Add New Problem</a>
+            </p>
+        </section>
+        </div>
+        </body>
+        
+        </html>

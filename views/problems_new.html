@@ -1,0 +1,29 @@
+<html>
+    
+<head>
+    <title>TPM: Add New Problem</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="section">
+        <h1 class="title">Add New Problem</h1>
+        <form class="form" method="POST" action="/problems/new">
+            <fieldset>
+                <label class="label">Summary</label>
+                <input class="input is-medium" type="text" name="summary">
+                <label class="label">Description</label>
+                <textarea name="description" class="textarea" rows="3"></textarea>
+                <hr />
+                <p>
+                    <button type="submit" class="button is-success">Add Problem</button>
+                    <a href="/" class="button">Go Back</a>
+                </p>
+            </fieldset>
+        </form>
+        </section>
+    </div>
+</body>
+
+</html>
