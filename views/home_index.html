@@ -15,6 +15,7 @@
                         <th>ID</th>
                         <th>Summary</th>
                         <th>Description</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +29,10 @@
                         <td>{{ .ID }}</td>
                         <td>{{ .Summary }}</td>
                         <td>{{ .Description }}</td>
+                        <td>
+                            <a class="button is-small">EDIT</a>
+                            <a class="button is-small is-danger">DELETE</a>
+                        </td>
                     </tr>
                     {{ end }}
                 </tbody>
