@@ -15,5 +15,6 @@ func makeRoute() http.Handler {
 	r.Get("/", controllers.Home{}.Index)
 	r.Get("/problems/new", controllers.Problems{}.New)
 	r.Post("/problems/new", controllers.Problems{}.Create)
+	r.Get("/problems/{problemId}", controllers.Problems{}.View)
 	return r
 }

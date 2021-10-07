@@ -1,0 +1,25 @@
+<html>
+    
+<head>
+    <title>TPM: Add New Problem</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="section content">
+            <h1 class="title">Add New Problem</h1>
+            <h3>ID</h3>
+            <p>{{ .Problem.ID }}</p>
+            <h3>Summary</h3>
+            <p>{{ .Problem.Summary }}</p>
+            <h3>Description</h3>
+            <p>{{ .Problem.Description }}</p>
+            <h3>Created At</h3>
+            <p>{{ .Problem.CreatedAt }}</p>
+            <a href="/" class="button">Go Back</a>
+        </section>
+    </div>
+</body>
+
+</html>
