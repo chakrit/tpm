@@ -30,5 +30,8 @@ func (p Problems) Create(resp http.ResponseWriter, r *http.Request) {
 
 func (p Problems) Edit(resp http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(resp, "Edit me please")
-	fmt.Fprintln(resp, "Hello, World!")
+}
+
+func (p Problems) View(resp http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(resp, "Edit me please")
 }
