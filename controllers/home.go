@@ -14,7 +14,7 @@ type Home struct{}
 func (c Home) Index(resp http.ResponseWriter, r *http.Request) {
 	problems, err := models.ListAllProblems()
 	if err != nil {
-		fmt.Fprintln(resp, "database load error!!!!")
+		fmt.Fprintln(resp, "db error:", err)
 		return
 	}
 
